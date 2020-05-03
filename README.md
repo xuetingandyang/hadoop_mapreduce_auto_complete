@@ -24,12 +24,16 @@ cd lamp-master/
 chmod +x *.sh   # change script mode to executable
 ./lamp.sh
 ```
-Get your local host ip address.
+**Get your local host ip address**.
 ```shell script
 ifconfig
 ```
 Note: There are multiple ip addresses, usually, the 'inet' of first one is the needed ip address.
 (flags is like <UP,BROADCAST,RUNNING,MULTICAST>).
+
+The **ip-address of docker container is different from you localhost**.
+In other words, the 'ifconfig' results are different in docker container and localhost.
+We need localhost's ip-address, not the container's ip-address.
 
 ### 2. Set up MySQL
 
